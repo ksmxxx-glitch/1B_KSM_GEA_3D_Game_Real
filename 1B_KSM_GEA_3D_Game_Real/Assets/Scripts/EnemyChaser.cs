@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public class EnemyChaser : MonoBehaviour
 {
@@ -40,4 +40,6 @@ public class EnemyChaser : MonoBehaviour
             player.GetComponent<Health>().TakeDamage(damage);
         }
     }
+
+
 }
