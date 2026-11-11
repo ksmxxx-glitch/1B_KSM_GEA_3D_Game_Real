@@ -8,16 +8,15 @@ public class RewardCalc : MonoBehaviour
 
     public float expRate = 1.5f;
 
-
     [ContextMenu("정산")]
 
     void Adjustment ()
     {
         Debug.Log("플레이 시간: " + playSeconds / 3600 + ("시간 ") + (playSeconds % 3600) / 60 + ("분 ") + ((playSeconds % 3600) % 60) + ("초"));
-        //  Debug.Log("골드 분배: " + );
-        //   Debug.Log("경험치: " + );
-        //   Debug.Log("레벨: " + );
-        Debug.Log("평균 데미지: " + totalDamage / hits + (".") );
+        Debug.Log("1인당 " + gold / members + "G, 리더 보너스 " + gold % members + "G");
+        Debug.Log("경험치: " + (int)(kills * expPerKill * expRate) + " (기본: " + kills * expPerKill + ")");
+        Debug.Log("Lv " + ((int)(kills * expPerKill * expRate) / 100 + 1) + ", 다음 레벨까지 " + (100 - (int)(kills * expPerKill * expRate) % 100));
+        Debug.Log("평균 데미지: " + (float)totalDamage / hits);
 
     }
 
@@ -30,6 +29,8 @@ public class RewardCalc : MonoBehaviour
 //      Debug.Log("경험치: " + (kills*expPerKill)*(배율) + ("(기본: ") + kills*expPerKill + ("Exp)");
 //      Debug.Log("Lv " + (최종경험치)/100 + (", 다음 레벨까지") + 100 - ((최종경험치)/100));
 //      Debug.Log("평균 데미지: " + totalDamage / hits + (".") + ( 소수점 아래 값) );
+//      
 //    }
 
 
+//              !!!!!!!!!! 소수점 아래 값 따로 구할 필요 없이 float만 써도 됨 !!!!!!!!!!
