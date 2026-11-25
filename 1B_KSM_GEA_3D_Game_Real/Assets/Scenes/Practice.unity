@@ -404,7 +404,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa14c88830dd2414dbc3510d90025757, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BattleLog
-  damages: b0040000ac0d000020030000e02e0000ac0d0000b6030000
+  damages: 
   criticalLine: 3000
 --- !u!114 &639564797
 MonoBehaviour:

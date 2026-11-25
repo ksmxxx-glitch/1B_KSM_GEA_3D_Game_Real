@@ -10,11 +10,27 @@ public class BattleLog : MonoBehaviour
     [ContextMenu("전투 기록")]
     void ShowBattleLog()
     {
-        //        string[] damages = { "슬라임", "고블린", "보스" };
-        //        foreach (string name in damages)
+        int total = 0;
+        List<int> criticals = new List<int>();
 
+        foreach (int damage in damages)
+        {
+            total += damage;
+
+            if (damage >= criticalLine)
+            {
+                criticals.Add(damage);
+            }
+        }
+
+        Debug.Log("총 데미지 " + total);
+        Debug.Log("치명타 " + criticals.Count + " 회");
+
+        foreach (int critical in criticals)
+        {
+            Debug.Log("치명타 " + critical);
+        }
     }
-
 }
 
 
