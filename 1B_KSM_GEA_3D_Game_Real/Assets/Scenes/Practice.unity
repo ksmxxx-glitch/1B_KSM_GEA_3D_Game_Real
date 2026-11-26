@@ -275,6 +275,7 @@ GameObject:
   - component: {fileID: 639564798}
   - component: {fileID: 639564797}
   - component: {fileID: 639564796}
+  - component: {fileID: 639564800}
   m_Layer: 0
   m_Name: Tester
   m_TagString: Untagged
@@ -404,7 +405,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa14c88830dd2414dbc3510d90025757, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BattleLog
-  damages: 
+  damages: 000000000000000000000000
   criticalLine: 3000
 --- !u!114 &639564797
 MonoBehaviour:
@@ -448,6 +449,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ArrayPractice
   golds: 2c010000b00400003200000020030000
+--- !u!114 &639564800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 639564788}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b7b3f5e34d0c5b40988488f5af5d472, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Battle
+  heroHp: 100
+  heroAttack: 30
+  heroDefense: 10
+  monsterHp: 80
+  monsterAttack: 25
+  monsterDefense: 5
 --- !u!1 &1612933045
 GameObject:
   m_ObjectHideFlags: 0
